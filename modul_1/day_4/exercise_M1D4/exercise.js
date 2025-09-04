@@ -34,8 +34,7 @@ console.log(fizzBuzz(6));
 
 
 // create a function to calculate Body mass index (BMI)
-let weight = 120; // in kg
-let height = 1.75; // in meters
+
 function calculateBMI(weight, height) {
     let bmi = weight / (height * height);
     if (bmi < 18.5) {
@@ -50,7 +49,7 @@ function calculateBMI(weight, height) {
         return "Obesity";
     }
 }
-console.log(calculateBMI(weight, height));
+console.log(calculateBMI(85, 1.75));
 
 
 // write a function to remove all odd numbers in an array and return a new array that cointains only even numbers
