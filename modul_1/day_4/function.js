@@ -82,3 +82,28 @@ const checkEvenOdd1 = (num3) => {
     : "Bilangan " + num3 + " adalah ganjil";
 }
 console.log(checkEvenOdd1(7));
+
+// NESTED FUNCTION
+function greeting(name){
+    function sayHello(){
+        return "Hello, ";
+    }
+    function greet(){
+        return "Welcome";
+    }
+    let result = `${sayHello()} ${name}, ${greet()} to the team!`;
+    return result;
+}
+console.log(greeting("John"));
+
+// CLOSURE
+function pertambahan(a1){
+    return function(){
+        return a1 + 2;
+    };
+    console.log("Ini tidak akan pernah dieksekusi");
+}
+
+const tambah = pertambahan(5);
+console.log(tambah());
+

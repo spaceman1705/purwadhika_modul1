@@ -44,3 +44,56 @@ let swappedStr = inputStr.split("").map(char => {
     }
 }).join("");
 console.log(swappedStr);
+
+
+// Write a code to find the largest of two given integers
+let a = 10;
+let b = 20;
+if (a > b) {
+    console.log(a);
+}
+else {
+    console.log(b);
+}
+
+
+// Write a conditional statement to sort three numbers
+let x = 42;
+let y = 27;
+let z = 18;
+if (x > y && x > z) {
+    if (y > z) {
+        console.log(x, y, z);
+    } else {
+        console.log(x, z, y);
+    }
+} else if (y > x && y > z) {
+    if (x > z) {
+        console.log(y, x, z);
+    } else {
+        console.log(y, z, x);
+    }
+} else {
+    if (x > y) {
+        console.log(z, x, y);
+    } else {
+        console.log(z, y, x);
+    }  
+}
+
+
+// write a code that show 1 if input is a string, 2 if the input is a number, and 3 for others data type
+let input = "123";
+if (typeof input === "string") {
+    console.log(1);
+} else if (typeof input === "number") {
+    console.log(2);
+} else {
+    console.log(3);
+}
+
+
+// write a code to change every latter a into * from a string of input
+let text = "An apple a day keeps the doctor away";
+let modifiedText = text.replace(/a/gi, "*");
+console.log(modifiedText);
