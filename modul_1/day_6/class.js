@@ -141,3 +141,22 @@ console.log(dog);
 const fish = new AnimalHaveFin("fish", "water", 3);
 console.log(fish);
 
+class CoffeeMachine {
+    makeCoffee(){
+        this.#boilWater();
+        this.#brewCoffee();
+        this.#pourCoffee();
+        console.log("Coffee is ready!");
+    }
+    #boilWater(){
+        console.log("Boiling water...");
+    }
+    #brewCoffee(){
+        console.log("Brewing coffee...");
+    }
+    #pourCoffee(){
+        console.log("Pouring coffee...");
+    }
+}
+const buatKopi = new CoffeeMachine();
+buatKopi.makeCoffee();
