@@ -1,0 +1,51 @@
+Question: Car Racing Game (OOP)
+
+Specifications:
+You are asked to implement a car racing game between two players.
+
+- Each car has three properties:
+  - name → string
+  - speed → number (default: 100)
+  - fuel → number (default: 100)
+- The game is turn-based.
+- On each turn:
+  - Cars consume 10 fuel to move.
+  - Speed may be randomly increased by a boost item (+20 speed) or decreased by a trap item (-20 speed).
+- The race continues until one car runs out of fuel.
+- The winner is the car with the highest distance traveled.
+
+Requirements:
+
+Create two classes: Car and RacingGame
+
+1. Car class
+
+- Properties:
+  - name: string
+  - speed: number = 100
+  - fuel: number = 100
+  - distance: number = 0
+
+- Methods:
+  - move(): void → decrease fuel by 10, increase distance by speed.
+  - useItem(item: { speed: number }): void → adjust speed by item effect.
+  - showStatus(): string → return "Car A (Speed => 120, Fuel => 80, Distance => 300)".
+
+2. RacingGame class
+
+- Constructor:
+  constructor(car1: Car, car2: Car)
+
+- Methods:
+  - getRandomItem(): { speed: number }
+    - Possible items:
+      - { speed: +20 } (boost)
+      - { speed: -20 } (trap)
+      - { speed: 0 } (nothing)
+  - start(): void
+    - Game flow:
+      1. Show both cars’ status.
+      2. Give each car a random item.
+      3. Both cars move.
+      4. Repeat until one car’s fuel ≤ 0.
+      5. Compare distances → show winner.
