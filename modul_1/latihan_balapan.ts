@@ -55,24 +55,24 @@ class RacingGame{
         while (this.car1.fuel >0 && this.car2.fuel > 0 ){
             const item1 = this.getRandomItem();
             this.car1.useItem(item1);
-            this.car1.move;
+            this.car1.move();
             console.log(this.car1.showStatus());
             const item2 = this.getRandomItem();
             this.car2.useItem(item2);
-            this.car2.move;
+            this.car2.move();
             console.log(this.car2.showStatus());
         }
-        if (this.car1.distance > this.car2.distance){
-            console.log(this.car1.name + " menempuh jarak" + this.car1.distance + ", sedangkan "+ this.car2.name + " menempuh jarak" + this.car2.distance + " => CAR A MENANG");
+        if (this.car1.distance > this.car2.distance) {
+            console.log(this.car1.name + " menempuh jarak" + this.car1.distance + ", sedangkan "+ this.car2.name + " menempuh jarak " + this.car2.distance + " => CAR A MENANG");
         } else if (this.car2.distance > this.car1.distance) {
-            console.log(this.car2.name + " menempuh jarak" + this.car2.distance + ", sedangkan "+ this.car1.name + " menempuh jarak" + this.car1.distance + " => CAR B MENANG");
+            console.log(this.car2.name + " menempuh jarak" + this.car2.distance + ", sedangkan "+ this.car1.name + " menempuh jarak " + this.car1.distance + " => CAR B MENANG");
         } else {
-            console.log(this.car1.name + " menempuh jarak" + this.car1.distance + ", sedangkan "+ this.car2.name + " menempuh jarak" + this.car2.distance + " => Seri GG!");
+            console.log(this.car1.name + " menempuh jarak" + this.car1.distance + ", sedangkan "+ this.car2.name + " menempuh jarak " + this.car2.distance + " => Seri GG!");
         }
     }
 }
 
-const carA = new Car("Car A");
-const carB = new Car("Car B");
-const game = new RacingGame(carA, carB);
+const car1 = new Car("Car A");
+const car2 = new Car("Car B");
+const game = new RacingGame(car1, car2);
 game.start();
