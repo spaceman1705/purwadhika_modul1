@@ -26,7 +26,7 @@ class Car {
         }
     }
     showStatus (): string {
-        return this.name + " => Speed = " + this.speed + ", Fuel = " + this.speed + ", Distance = " + this.distance;
+        return this.name + " => Speed = " + this.speed + ", Fuel = " + this.fuel + ", Distance = " + this.distance;
     }
 }
 
