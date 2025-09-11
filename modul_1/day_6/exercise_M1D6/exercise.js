@@ -1,5 +1,5 @@
 // 1. Create a function to calculate array of student data
-class Student {
+/* class Student {
     constructor(name, email, age, score) {
         this.Name = name;
         this.Email = email;
@@ -72,6 +72,57 @@ let students = [
 
 let stats = new StudentStatistics(students);
 console.log(stats.calculate());
-
+ */
 // 2. Create a program to create transaction
+class Product{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+}
 
+class Transaction{
+    constructor(){ 
+        this.total = 0;
+        this.product = [];
+    }
+
+    addToCart(product, qty){
+        this.product.push({
+            name: product.name,
+            price: product.price,
+            qty: qty
+        });
+    }
+
+    showTotal(){
+        this.product.map(item => {
+            this.total += item.price * item.qty;
+        });
+        return this.total;
+    }
+
+    checkOut(){
+        return {
+            items: this.product.map(item => ({
+                name: item.name,
+                qty: item.qty,
+                subtotal: item.price * item.qty
+            })),
+            total: this.showTotal()
+        };
+    }
+}
+
+const baju = new Product("baju", 250000);
+const celana = new Product("celana", 100000);
+const sepatu = new Product("sepatu", 200000);
+
+const myTransaction = new Transaction();
+
+myTransaction.addToCart(baju, 3);
+myTransaction.addToCart(celana, 2);
+myTransaction.addToCart(sepatu, 1);
+
+console.log(myTransaction);
+console.log(myTransaction.checkOut());
