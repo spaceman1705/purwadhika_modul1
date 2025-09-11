@@ -19,7 +19,7 @@ class Car {
         this.fuel -= 10;
         this.distance += this.speed
     }
-    useItem (item: {speed:number}): void {
+    useItem (item: {speed}): void {
         this.speed += item.speed;
         if (this.speed < 0) {
             this.speed = 0;

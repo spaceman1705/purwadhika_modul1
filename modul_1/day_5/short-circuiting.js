@@ -1,30 +1,41 @@
-// TRUTHY & FALSY
+// TRUTHY OR FALSY
 
 // TRUTHY
-console.log(Boolean("3")); // true
-console.log(Boolean([])); // true
+console.log(Boolean("3"));
+console.log(Boolean(50));
+console.log(Boolean([]));
 
 // FALSY
-console.log(Boolean("")); // false
-console.log(Boolean(0)); // false
-console.log(Boolean(null)); // false
-console.log(Boolean(undefined)); // false
-console.log(Boolean(NaN)); // false
+console.log(Boolean(""));
+console.log(Boolean(0));
+console.log(Boolean(null));
+console.log(Boolean(undefined));
+console.log(Boolean(NaN));
 
-function greet(mesaage){
-    if(!mesaage){
-        return "INPUT TIDAK SESUAI";
-    }
-    return message;
+function greet(message) {
+  console.log(message);
+  // ! ARTINYA NEGASI, JIKA TRUE DIBALIK JADI FALSE, JIKA FALSE DIBALIK JADI TRUE
+  if (!message) {
+    return "INPUT TIDAK SESUAI";
+  }
+
+  return message;
 }
+
 console.log(greet());
 
 // SHORT CIRCUITING && OPERATOR
-console.log(false && "OPERAND KANAN JALAN");
+// JIKA VALUE / OPERAND DIKIRI BERUPA FALSY, MAKA AMBIL VALUE DIKIRI
+// TAPI JIKA VALUE / OPERAND DIKIRI BERUPA TRUTHY, MAKA AMBIL VALUE DIKANAN
+console.log(true && "KANAN JALAN", "OPERAND KANAN JALAN");
+console.log(false && "KANAN JALAN", "OPERAND KIRI JALAN");
 
 // SHORT CIRCUITING || OPERATOR
-
-function showName(name){
-    const nama = name || "USER";
+function showName(name) {
+  // JIKA VALUE / OPERAND DIKIRI BERUPA TRUTHY, MAKA AMBIL VALUE DIKIRI
+  // TAPI JIKA VALUE / OPERAND DIKIRI BERUPA FALSY, MAKA AMBIL VALUE DIKANAN
+  const nama = name || "";
+  return nama.toUpperCase();
 }
-console.log(showName("Budi"));
+
+console.log(showName());
