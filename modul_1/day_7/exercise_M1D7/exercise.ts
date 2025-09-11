@@ -24,7 +24,7 @@ const students1 = [
 ];
 const students2 = [ 
     new Student("Bob", "bobibob@gmail.com"),
-    new Student("Charlie", "charlieputh@gmail.com")
+    new Student("Charlie", "charlieteh@gmail.com")
 ];
 const merged = mergeArray(students1, students2);
 console.log(merged);
@@ -34,12 +34,18 @@ console.log(merged);
 
 
 // Create a function to find a factorial number using recursion
-function factorial (n: number): number {
+function factorial (n: number): string {
     let result = 1;
-    for (let i = 1; i <= n; i++){
+    let tambahkan = "";
+    for (let i = n; i >= 1; i--){
         result *= i;
-        
+        tambahkan += i;
+        if (i > 1){
+            tambahkan += " x ";
+        }
     }
-    return result;
+    let output = n + "! = " + tambahkan + " = " + result;
+    return output;
 }
-console.log(factorial(5));
+const faktor = factorial(5);
+console.log(faktor);
