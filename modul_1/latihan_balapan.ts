@@ -74,5 +74,5 @@ class RacingGame{
 
 const car1 = new Car("Car A");
 const car2 = new Car("Car B");
-const game = new RacingGame(car1, car2);
-game.start();
+const balap = new RacingGame(car1, car2);
+balap.start();
