@@ -30,6 +30,21 @@ const merged = mergeArray(students1, students2);
 console.log(merged);
 
 // create a function that can accect input as an array of objects and switch all values into property and property into value
+function switchKeyValue(arr: Array<Record<string, any>>): Array<Record<string, string>> {
+  return arr.map(obj => {
+    const switchedObj: Record<string, string> = {};
+    for (const key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        // Mengubah value menjadi string agar bisa menjadi key
+        switchedObj[String(obj[key])] = key;
+      }
+    }
+    return switchedObj;
+  });
+}
+const input = [{name: 'David', age: 20}];
+const output = switchKeyValue(input);
+console.log(output);
 
 
 
