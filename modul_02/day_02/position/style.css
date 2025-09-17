@@ -1,0 +1,31 @@
+.container{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.static{
+    position: static;
+    background-color: antiquewhite;
+}
+
+.relative{
+    position: relative;
+    top: 50px;
+    left: 100px;
+    background-color: azure;
+}
+
+.relative-absolute{
+    
+}
+
+.absolute{
+    position: absolute;
+    top: 50px;
+}
+
+.fixed{
+
+}
